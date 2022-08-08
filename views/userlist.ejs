@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title;%></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <%- include('navbar');%>
+    <table class="table table-border table-hover table-light table-striped">
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i=0; i < user.length; i++){%>
+            <tr>
+                <td><%= i+1;%></td>
+                <td><%= user[i].firstname;%></td>
+                <td><%= user[i].lastname;%></td>
+                <td><%= user[i].email;%></td>
+                <td><%= user[i].address;%></td>
+                <td>
+                    <a href="/edit_user?userId=<%=user[i].id;%>" class="btn btn-primary">Edit</a>
+                    <a href="/delete?userId=<%=user[i].id;%>" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- <script src="/css/style.css"></script> -->
+</head>
+
+<body>
+    <%- include('navbar');%>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-2 mt-5">
+                    <form action="" method="post">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Singup Form</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Firstname</label>
+                                    <input type="text" name="firstname" class="form-control">
+                                </div>
+                                <div class="form-group mt-4">
+                                    <label>Lastname</label>
+                                    <input type="text" name="lastname" class="form-control">
+                                </div>
+                                <div class="form-group mt-4">
+                                    <lable>Address</lable>
+                                    <textarea class="form-control" name="address" type="text"></textarea>
+                                </div>
+                                <div class="form-group mt-4">
+                                    <lable>Email</lable>
+                                    <input type="email" name="email" class="form-control">
+                                </div>
+                                <div class="form-group mt-4">
+                                    <lable>Password</lable>
+                                    <input type="password" name="password" class="form-control">
+                                </div>
+                            <div class="card-footer mt-4">
+                                <button class="btn btn-info" type="submit">submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
